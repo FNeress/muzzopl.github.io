@@ -48,3 +48,52 @@ window.addEventListener('scroll', function() {
         }
     });
 });''
+
+document.addEventListener('DOMContentLoaded', function() {
+    const logos = document.querySelectorAll('.logo');
+
+    logos.forEach(logo => {
+        logo.addEventListener('click', function() {
+            const nome = this.getAttribute('data-nome');
+            const descricao = this.getAttribute('data-descricao');
+            const logoSrc = this.src;
+            exibirPopup(nome, descricao, logoSrc);
+        });
+    });
+
+    function exibirPopup(nome, descricao, logoSrc) {
+        const popupContainer = document.getElementById('popup-container');
+        const backdrop = document.createElement('div');
+        backdrop.classList.add('backdrop');
+        popupContainer.appendChild(backdrop);
+
+        const popup = document.createElement('div');
+        popup.classList.add('popup');
+        popup.innerHTML = `
+            <div class="popt">
+                <img src="${logoSrc}" class="popimg" alt="Logo clicado">
+                </div>
+                <p>${descricao}</p>
+                <button id="fecharPopupButton" class="fa">&#xf00d;</button>
+            
+        `;
+        popupContainer.appendChild(popup);
+
+        setTimeout(function() {
+            backdrop.classList.add('show');
+            popup.classList.add('show');
+        }, 10);
+
+        backdrop.addEventListener('click', fecharPopup);
+        const fecharPopupButton = document.getElementById('fecharPopupButton');
+        fecharPopupButton.addEventListener('click', fecharPopup);
+    }
+
+    function fecharPopup() {
+        const popupContainer = document.getElementById('popup-container');
+        const backdrop = document.querySelector('.backdrop');
+        const popup = document.querySelector('.popup');
+        popupContainer.removeChild(backdrop);
+        popupContainer.removeChild(popup);
+    }
+});
