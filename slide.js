@@ -6,7 +6,7 @@ document.getElementById('radio1').checked = true
 
 setInterval(() => {
     proximaImg()
-}, 9000)
+}, 6000)
 
 
 function proximaImg(){
@@ -33,3 +33,18 @@ document.querySelector('.right-arrow').addEventListener('click', () => {
     }
     document.getElementById('radio' + cont).checked = true;
 });
+
+window.addEventListener('scroll', function() {
+    var elementos = document.querySelectorAll('.texto-animado');
+    
+    elementos.forEach(function(elemento) {
+        var posicaoElemento = elemento.getBoundingClientRect().top;
+        var posicaoTela = window.innerHeight;
+
+        if (posicaoElemento < posicaoTela) {
+            elemento.classList.add('aparecendo');
+        } else {
+            elemento.classList.remove('aparecendo');
+        }
+    });
+});''
