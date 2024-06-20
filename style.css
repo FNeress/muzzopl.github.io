@@ -12,7 +12,7 @@
 *{
     padding: 0px;
     margin: 0px;
-    /* border: 1px solid greenyellow; */
+        
 }
 body{
     background-color: rgba(255, 255, 255, 0.164);
@@ -370,9 +370,6 @@ footer{
     flex-direction: row;
     justify-content: center;
 }
-.logo{
-    text-wrap: wrap;
-}
 .popup button {
     padding: 0px 2px 0px 2px; 
     background-color: #33333300;
@@ -393,4 +390,69 @@ footer{
     text-align: center;
     font-family: "dosis", sans-serif;
     font-weight: 400
+}
+.flex{
+    display: flex;
+    max-width: 98vw;
+    width: 900px;
+    height: 300px;
+    justify-content: center;
+    align-items: center;
+}
+.carousel-container {
+    position: relative;
+    width: 80%;
+    max-width: 2100px; /* 3 * 700px */
+    overflow: hidden;
+}
+
+.carousel {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    width: 100%;
+}
+
+.carousel-track {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carousel-item {
+    flex: 0 0 700px;
+    max-width: 700px;
+    max-height: 900px;
+    box-sizing: border-box;
+    margin-right: 10px;
+}
+
+.carousel-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.carousel-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.seta-esquerda {
+    left: 10px;
+}
+
+.seta-direita {
+    right: 10px;
+}
+
+.carousel-arrow:hover {
+    background-color: rgba(0, 0, 0, 0.8);
 }

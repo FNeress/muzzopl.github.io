@@ -49,51 +49,49 @@ window.addEventListener('scroll', function() {
     });
 });''
 
-document.addEventListener('DOMContentLoaded', function() {
-    const logos = document.querySelectorAll('.logo');
+const track = document.querySelector('.carousel-track');
+const setaEsquerda = document.querySelector('.seta-esquerda');
+const setaDireita = document.querySelector('.seta-direita');
+const items = document.querySelectorAll('.carousel-item');
+const itemWidth = items[0].getBoundingClientRect().width + 10; // 10px for margin-right
+let currentIndex = 0;
 
-    logos.forEach(logo => {
-        logo.addEventListener('click', function() {
-            const nome = this.getAttribute('data-nome');
-            const descricao = this.getAttribute('data-descricao');
-            const logoSrc = this.src;
-            exibirPopup(nome, descricao, logoSrc);
-        });
-    });
+function updateTrackPosition() {
+    track.style.transform = `translateX(-${currentIndex * itemWidth}px)`;
+}
 
-    function exibirPopup(nome, descricao, logoSrc) {
-        const popupContainer = document.getElementById('popup-container');
-        const backdrop = document.createElement('div');
-        backdrop.classList.add('backdrop');
-        popupContainer.appendChild(backdrop);
-
-        const popup = document.createElement('div');
-        popup.classList.add('popup');
-        popup.innerHTML = `
-            <div class="popt">
-                <img src="${logoSrc}" class="popimg" alt="Logo clicado">
-                </div>
-                <p>${descricao}</p>
-                <button id="fecharPopupButton" class="fa">&#xf00d;</button>
-            
-        `;
-        popupContainer.appendChild(popup);
-
-        setTimeout(function() {
-            backdrop.classList.add('show');
-            popup.classList.add('show');
-        }, 10);
-
-        backdrop.addEventListener('click', fecharPopup);
-        const fecharPopupButton = document.getElementById('fecharPopupButton');
-        fecharPopupButton.addEventListener('click', fecharPopup);
+setaEsquerda.addEventListener('click', () => {
+    if (currentIndex > 0) {
+        currentIndex--;
+    } else {
+        currentIndex = items.length - 3; // Vai para o último conjunto de 3 itens
     }
-
-    function fecharPopup() {
-        const popupContainer = document.getElementById('popup-container');
-        const backdrop = document.querySelector('.backdrop');
-        const popup = document.querySelector('.popup');
-        popupContainer.removeChild(backdrop);
-        popupContainer.removeChild(popup);
-    }
+    updateTrackPosition();
+    resetAutoSlide();
 });
+
+setaDireita.addEventListener('click', () => {
+    if (currentIndex < items.length - 3) {
+        currentIndex++;
+    } else {
+        currentIndex = 0; // Volta para o início
+    }
+    updateTrackPosition();
+    resetAutoSlide();
+});
+
+function autoSlide() {
+    if (currentIndex < items.length - 3) {
+        currentIndex++;
+    } else {
+        currentIndex = 0;
+    }
+    updateTrackPosition();
+}
+
+let autoSlideInterval = setInterval(autoSlide, 3000);
+
+function resetAutoSlide() {
+    clearInterval(autoSlideInterval);
+    autoSlideInterval = setInterval(autoSlide, 3000);
+}
