@@ -91,7 +91,7 @@ const infiniteScroll = () => {
         carousel.scrollLeft = carousel.offsetWidth;
         carousel.classList.remove("no-transition");
     }
-     
+
     clearTimeout(timeoutId);
     if (!wrapper.matches(":hover")) autoPlay();
 };
