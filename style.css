@@ -13,7 +13,7 @@
 *{
     padding: 0px;
     margin: 0px;
-    /* border: 1px solid greenyellow; */
+    /* border: 1px solid rgb(172, 255, 47); */
 }
 main{
     width: 100vw;
@@ -25,10 +25,6 @@ body{
     font-weight: 600;
     
 }
-p{
-    font-size: 18px;
-    margin-top: 15px;
-}   
 h2{
     font-size:28px;
     font-family:  "Playfair Display", serif;
@@ -38,7 +34,17 @@ h3{
 }
 header{
     background-color: rgb(255, 255, 255);
-    
+    align-items: center;
+}
+nav img {
+    display: flex;
+    position: absolute;
+    top: 5.5%;
+    left: 5%;
+}
+.f-logo{
+    background-color: white;
+    display: block;
 }
 .logo{
     height: 90px;
@@ -47,17 +53,19 @@ nav{
     height: 12vh;
     text-align: center;
     display: flex;
-    gap: 30px;
-    align-items: center;justify-content: center;
+    align-items: right;
+    justify-content: right;
     font-weight: 400;
+}
+nav ul:last-child{
+    margin-right: 5%;
 
-    
 }
 .menu-desktop ul{
     list-style: none;
     color:#1e73be;
     text-decoration: inherit;
-    font-size: 1.8rem;
+    font-size: 1rem;
     transition-duration: 0.2s;
     text-shadow: 1px 3px 5px rgba(0, 0, 0, 0.356);
     display: flex;
@@ -69,7 +77,7 @@ nav{
     list-style: none;
     color:#1e73be;
     text-decoration: inherit;
-    font-size: 1.8rem;
+    font-size: 1.4rem;
     transition-duration: 0.2s;
     text-shadow: 1px 3px 5px rgba(0, 0, 0, 0.356);
 }
@@ -222,20 +230,17 @@ main{
     justify-content: center;
     flex-wrap: wrap;
 }
-.dh3{
-    padding: 20px;
-    margin-top: 10px;
-    display: flex;
-    flex-direction: row;
-}
 .refe{
-    max-width:600px ;
+    max-width:600px ;   
     width: 30%;
+}
+.refe p{
+    margin-top: 15px;
 }
 .dh4{
     display: flex;
     flex-direction: column;
-
+    align-items: center;
 }
 h3{
     margin-bottom: 10px;
@@ -243,7 +248,6 @@ h3{
 .t-ramos{
     text-align: center;
     font-weight: 100;
-    margin-top: 15px;
     padding: 10px;
 }
 .texto-animado{
@@ -268,12 +272,6 @@ h3{
     align-self: center;
     margin-top: 20px;
     margin-bottom: 20px;
-}
-.infoimg{
-    width: 30px;
-}
-footer{
-
 }
 .center{
     padding: 15px;
@@ -380,7 +378,8 @@ footer{
     margin-right: 10px;
 }
 
-.carousel-item img {
+.carousel-item 
+ {
     width: 100%;
     height: auto;
     display: block;
@@ -412,8 +411,8 @@ footer{
 .linear{
     background: linear-gradient(to left, #00c5ccb6,#1e73bec9 );
     width: 100%;
-    height: 380px;
-    padding: 0 35px;
+    height: auto;
+    padding: 10px 35px;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -489,6 +488,126 @@ footer{
 }
 .img{
     border-radius: 8px;
+}
+.rs{
+    background-image: linear-gradient(to right, #00c5ccb6,#1e73be);
+    height: auto;
+    text-align: center;  
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 12px;
+      
+}
+.rs img{
+    margin-top: 2.5px;
+    width: 25px;
+    height: auto;
+    padding: 5px;
+    border: 2px solid  #1e73be;
+    border-radius: 40px;
+    background-color:white;
+}.HOS p {
+    margin: 20px;
+    margin-top: 0px;
+}
+.rs p{
+    color: rgb(248, 248, 248);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.37);
+    place-items: center;
+    display: grid;
+    font-weight: 400;
+}
+
+.upground{
+    background-color: #4949495e;
+    height:auto;
+    display: flex;
+    flex-direction:column;
+    min-width: 50vw;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 20px;
+}
+.ft-bg h6{
+    font-size: 1.2rem;
+    margin-top: 20px;
+    color: #ffffffd7;
+    text-shadow: 1px 1px 2px #000000;
+    font-weight: 500;
+    height: 50px;
+}   
+.upground p{
+    font-size: 1.2rem;
+    margin-left: 30px;
+    color: #ffffffd7;
+    text-shadow: 1px 1px 2px #000000;
+    font-weight: 500;
+    margin-bottom:10px;
+    
+}
+.ft-bg{
+    background-image: url(imagens/predio.jpg);
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    height: auto;
+}
+.G-logos{
+    align-items: center;
+    justify-content: space-evenly;
+    text-align: center;
+    
+}
+
+.maps{
+    border: 2px solid #00c6cc;
+    border-radius: 25px;
+    grid-row: 3;
+    grid-column: 1;
+    margin-left: 30px;
+}
+.lin{
+    grid-row: 1;
+    grid-column: 2; 
+}
+
+.lin2{
+    grid-row: 2;
+    grid-column: 2;
+}.lin3{
+    grid-row: 3;
+    grid-column: 2;
+}.lin4{
+    grid-row: 4;
+    grid-column: 2;
+}
+.logo-f{
+    height: auto;
+    width: 200px;
+}
+.redes{
+    border-radius: 30px;
+    height: auto;
+    width: 100px;
+}
+.G-logos h5{
+    color: #f0eded;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.548);
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+
+}
+footer{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    background-image: linear-gradient(to bottom,#1e73be69,#00c5cc65 );
 }
 /* @media screen and (max-width:900px){
     .wrapper .carousel{
