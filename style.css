@@ -23,6 +23,7 @@ body{
     background-color: rgba(167, 252, 255, 0.096);
     font-family: "Dosis", sans-serif;
     font-weight: 600;
+    position: center;
     
 }
 h2{
@@ -35,11 +36,12 @@ h3{
 header{
     background-color: rgb(255, 255, 255);
     align-items: center;
+    height: 12vh;
 }
 nav img {
     display: flex;
     position: absolute;
-    top: 5.5%;
+    top: 6.5%;
     left: 5%;
 }
 .f-logo{
@@ -241,6 +243,14 @@ main{
     display: flex;
     flex-direction: column;
     align-items: center;
+    max-width: 900px;
+}
+.HOS{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height:300px ;
 }
 h3{
     margin-bottom: 10px;
@@ -441,6 +451,7 @@ h3{
 .wrapper{
     max-width: 1100px;
     width: 100%;
+    min-width: 600px;
 }
 .wrapper .carousel{
     display: grid;
@@ -533,19 +544,19 @@ h3{
 .ft-bg h6{
     font-size: 1.2rem;
     margin-top: 20px;
-    color: #ffffffd7;
-    text-shadow: 1px 1px 2px #000000;
+    color: #f0eded;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.548);
     font-weight: 500;
     height: 50px;
 }   
 .upground p{
     font-size: 1.2rem;
     margin-left: 30px;
-    color: #ffffffd7;
-    text-shadow: 1px 1px 2px #000000;
+    color: #f0eded;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.548);
     font-weight: 500;
     margin-bottom:10px;
-    
+    font-family:  'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 .ft-bg{
     background-image: url(imagens/predio.jpg);
@@ -601,17 +612,18 @@ h3{
     display: flex;
     justify-content: center;
     flex-direction: column;
+    font-size: 1.2rem;
+    
 
 }
 footer{
     display: flex;
     flex-direction: row;
     justify-content: center;
-    background-image: linear-gradient(to bottom,#1e73be69,#00c5cc65 );
 }
-/* @media screen and (max-width:900px){
+@media screen and (max-width:900px){
     .wrapper .carousel{
-        grid-auto-columns: calc((100% /2 ) - 9px);
+        grid-auto-columns: calc((100% /2 ) - 12px);
     }
 }
 @media screen and (max-width:600px){
@@ -619,4 +631,4 @@ footer{
         grid-auto-columns: 100%;
     }
     
-} */
+}
