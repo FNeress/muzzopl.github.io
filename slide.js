@@ -123,7 +123,7 @@ function typeInitial() {
 
         line.insertBefore(document.createTextNode(initialText[currentInitialIndex]), cursorElement);
         currentInitialIndex++;
-        setTimeout(typeInitial, 60); // Adjust typing speed here
+        setTimeout(typeInitial, 400); // Adjust typing speed here
     } else {
         if (cursorElement.parentNode) {
             cursorElement.parentNode.removeChild(cursorElement);
