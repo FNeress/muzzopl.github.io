@@ -36,7 +36,7 @@ h3{
 header{
     background-color: rgb(255, 255, 255);
     align-items: center;
-    height: 16vh;
+    height: 17vh;
     width: 98.8vw;
     overflow: hidden;
     position: fixed;
@@ -98,7 +98,7 @@ nav ul a:hover{
     color: #00c6cc;
 }
 .primeiro{
-    margin-top: 16vh;
+    margin-top: 17vh;
 }
 main{
     width: 100%;
@@ -636,10 +636,58 @@ footer{
     justify-content: center;
     text-align: center;
     align-items: center;
+    border-bottom: 1px solid rgb(36, 36, 43);
+    box-shadow: 2px 2px 4px rgb(49, 48, 48);
 }
 .centro{
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center  ;
+}
+.P-grupo{
+    
+    max-width: 450px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-left: 5%;
+    margin-right: 5%;
+    flex-wrap: wrap;
+    
+
+}
+.P-grupo img{
+    width: 250px;
+    height: 250px;
+    border: 3px solid #00c6cc;
+    border-radius: 50%;
+    background-color: white;
+    outline: 1px solid blue;
+    margin-top: 30px;
+    position: center;
+    size: cover;
+    box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.308);
+}
+.S-grupo{
+    display: flex;
+    justify-content: center;
+}
+.contab{
+    background-image: url(imagens/logo/5.png);
+    background-position: center;
+    background-size: 100%;
+    width: 250px;
+    height: 250px;
+    border: 3px solid #00c6cc;
+    border-radius: 50%;
+    background-color: white;
+    outline: 1px solid blue;
+    margin-top: 30px;
+    box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.308);
+}
+.P-grupo h4{
+    margin-top: 10px;
+    text-shadow: 1px 1px 10px #00000069;
 }
