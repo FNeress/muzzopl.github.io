@@ -70,10 +70,6 @@ nav{
     justify-content: right;
     font-weight: 400;
 }
-nav ul:last-child{
-    margin-right: 5%;
-
-}
 .menu-desktop ul{
     list-style: none;
     color:#1e73be;
@@ -94,6 +90,9 @@ nav ul:last-child{
     transition-duration: 0.2s;
     text-shadow: 1px 3px 5px rgba(0, 0, 0, 0.356);
 
+}
+.menu-desktop ul:last-child{
+    margin-right: 5%;
 }
 nav ul a:hover{
     color: #00c6cc;
@@ -167,6 +166,7 @@ nav ul a:hover{
 .menu-mobile .btn-fechar i{
     color: #fff;
     font-size: 30px;
+    cursor: pointer;
 
 }
 
@@ -260,6 +260,7 @@ main{
     flex-direction: row;
     background-color: #0000003f;
     height: 93vh;
+    min-height: 93vh;
     /* position: relative; */
 
 }
@@ -325,6 +326,7 @@ main{
     /* position: absolute; */
     padding: 0;
     transition: 0.2s;
+    min-height: 50vh;
     
     
 }
@@ -528,7 +530,7 @@ h3{
 .carousel::-webkit-scrollbar{
     display: none;
 }
-.wrapper i{
+.wrapper>i{
     height: 50px;
     width: 50px;
     background-color: #fff;
@@ -540,13 +542,13 @@ h3{
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.493);
     font-size: 1.43rem;
 }
-.wrapper i:hover{
+.wrapper>i:hover{
     background-color: #f0eded;
 }
-.wrapper i:first-child{
+.wrapper>i:first-child{
     left: -1vw;
 }
-.wrapper i:last-child{
+.wrapper>i:last-child{
     right: -1vw;
 }
 .carousel.dragging{
